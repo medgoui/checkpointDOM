@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script src="https://use.fontawesome.com/c560c025cf.js"></script>
+<div class="container">
+   <div class="card shopping-cart">
+            <div class="card-header bg-dark text-light">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                Shopping cart
+                <a href="" class="btn btn-outline-info btn-sm pull-right">Continue shopping</a>
+                <div class="clearfix"></div>
+            </div>
+            <div class="card-body">
+                    <!-- PRODUCT -->
+                    <div id="row1" class="row">
+                        <div class="col-12 col-sm-12 col-md-2 text-center">
+                                <img class="img-responsive" src="./res/ck9481-6-adidas-petnit-cblack-hireye-original-imafgcyckzu87dru.jpeg" alt="Adidas Petnit cBlack" width="120" height="80">
+                        </div>
+                        <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                            <h4 class="product-name"><strong>Adidas Petnit CBlack</strong></h4>
+                            <h4>
+                                <small>Size: </small>
+                                <select name="taille" id="taille">
+                                  <option>Select your size</option>
+                                  <option>40</option>
+                                  <option>41</option>
+                                  <option>42</option>
+                                  <option>43</option>
+                                  <option>44</option>
+                                </select>
+                            </h4>
+                        </div>
+                        <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                            <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                                <h6><strong><span class="prix" id="prix1">120</span> DT </strong></h6>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4">
+                                <div class="quantity">
+                                    <input type="button" value="+" id="plus1" class="plus">
+                                    <input type="number" step="1" max="99" min="1" value="1" title="Qty" id="qty1" class="qty"
+                                           size="4">
+                                    <input type="button" value="-" id="minus1" class="minus">
+                                </div>
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2 text-right">
+                                <button type="button" onclick="delet('prix1','row1')" class="btn btn-outline-danger btn-xs">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
+                                <button type="button" onclick="changed('heart1')" class="btn btn-outline-danger btn-xs">
+                                    <i id="heart1" class="fa fa-heart-o" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- END PRODUCT -->
+                    <!-- PRODUCT -->
+                    <div id="row2" class="row">
+                        <div class="col-12 col-sm-12 col-md-2 text-center">
+                                <img class="img-responsive" src="./res/cj8074fw-18-6-adidas-visgre-cblack-grefiv-original-imafd28chwhbjsam.jpeg" alt="Adidas Run Shoes Black" width="120" height="80">
+                        </div>
+                        <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                            <h4 class="product-name"><strong>Adidas Visgre</strong></h4>
+                            <h4>
+                              <small>Size: </small>
+                              <select name="taille" id="taille">
+                                <option>Select your size</option>
+                                <option>40</option>
+                                <option>41</option>
+                                <option>42</option>
+                                <option>43</option>
+                                <option>44</option>
+                              </select>
+                            </h4>
+                        </div>
+                        <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                            <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                                <h6><strong><span class="prix" id="prix2">180</span> DT</strong></h6>
+                            </div>
+                            <div class="col-4 col-sm-4 col-md-4">
+                                <div class="quantity">
+                                    <input type="button" value="+" id="plus2" class="plus">
+                                    <input type="number" step="1" max="99" min="1" value="1" title="Qty" id="qty2" class="qty"
+                                           size="4">
+                                    <input type="button" value="-" id="minus2" class="minus">
+                                </div>
+                            </div>
+                            <div class="col-2 col-sm-2 col-md-2 text-right">
+                                <button type="button" id="delete2" onclick="delet('prix2', 'row2')" class="btn btn-outline-danger btn-xs">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                </button>
+                                <button type="button" onclick="changed('heart2')" class="btn btn-outline-danger btn-xs">
+                                    <i id="heart2" class="fa fa-heart-o" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- END PRODUCT -->
+                    <!-- PRODUCT -->
+                    <div id="row3" class="row">
+                      <div class="col-12 col-sm-12 col-md-2 text-center">
+                              <img class="img-responsive" src="./res/f35559-12-adidas-legivy-sesame-cblack-original-imafg7ghusjzzwrg.jpeg" alt="Adidas Run Shoes Black" width="120" height="80">
+                      </div>
+                      <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                          <h4 class="product-name"><strong>Adidas Legivy</strong></h4>
+                          <h4>
+                            <small>Size: </small>
+                            <select name="taille" id="taille">
+                              <option>Select your size</option>
+                              <option>40</option>
+                              <option>41</option>
+                              <option>42</option>
+                              <option>43</option>
+                              <option>44</option>
+                            </select>
+                          </h4>
+                      </div>
+                      <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                          <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                              <h6><strong><span class="prix" id="prix3">90</span> DT </strong></h6>
+                          </div>
+                          <div class="col-4 col-sm-4 col-md-4">
+                              <div class="quantity">
+                                  <input type="button" value="+" id="plus3" class="plus">
+                                  <input type="number" step="1" max="99" min="1" value="1" title="Qty" id="qty3" class="qty"
+                                         size="4">
+                                  <input type="button" value="-" id="minus3" class="minus">
+                              </div>
+                          </div>
+                          <div class="col-2 col-sm-2 col-md-2 text-right">
+                              <button type="button" id="delete3" class="btn btn-outline-danger btn-xs" onclick="delet('prix3', 'row3')">
+                                  <i class="fa fa-trash" aria-hidden="true"></i>
+                              </button>
+                              <button type="button" onclick="changed('heart3')" class="btn btn-outline-danger btn-xs">
+                                <i id="heart3" class="fa fa-heart-o" aria-hidden="true"></i>
+                            </button>
+                          </div>
+                      </div>
+                  </div>
+                  <hr>
+                  <!-- END PRODUCT -->
+                  <!-- PRODUCT -->
+                  <div id="row4" class="row">
+                    <div class="col-12 col-sm-12 col-md-2 text-center">
+                            <img class="img-responsive" src="./res/travel-100-men-s-trekking-shirt-maroon.jpg" alt="Adidas Run Shoes Black" width="120" height="100">
+                    </div>
+                    <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                        <h4 class="product-name"><strong>Men's Trekking Shirt Warm</strong></h4>
+                        <h4>
+                          <small>Size: </small>
+                          <select name="taille" id="taille">
+                            <option>Select your size</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                            <option>XXL</option>
+                          </select>
+                        </h4>
+                    </div>
+                    <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                        <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                            <h6><strong><span class="prix" id="prix4">50</span> DT</strong></h6>
+                        </div>
+                        <div class="col-4 col-sm-4 col-md-4">
+                            <div class="quantity">
+                                <input type="button" value="+" id="plus4" class="plus">
+                                <input type="number" step="1" max="99" min="1" value="1" title="Qty" id="qty4" class="qty"
+                                       size="4">
+                                <input type="button" value="-" id="minus4" class="minus">
+                            </div>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2 text-right">
+                            <button type="button" id="delete4" class="btn btn-outline-danger btn-xs" onclick="delet('prix4', 'row4')">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </button>
+                            <button type="button" onclick="changed('heart4')" class="btn btn-outline-danger btn-xs">
+                                <i id="heart4" class="fa fa-heart-o" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- END PRODUCT -->
+                <!-- PRODUCT -->
+                <div id="row5" class="row">
+                  <div class="col-12 col-sm-12 col-md-2 text-center">
+                          <img class="img-responsive" src="./res/83eaf5e02a8ca142c904b345b1f9656f.jpg" alt="Adidas Run Shoes Black" width="120" height="150">
+                  </div>
+                  <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
+                      <h4 class="product-name"><strong>Men's Carrot Fit Jean</strong></h4>
+                      <h4>
+                        <small>Size: </small>
+                        <select name="taille" id="taille">
+                          <option>Select your size</option>
+                          <option>32</option>
+                          <option>34</option>
+                          <option>36</option>
+                          <option>38</option>
+                          <option>42</option>
+                        </select>
+                      </h4>
+                  </div>
+                  <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
+                      <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
+                          <h6><strong><span class="prix" id="prix5">130</span> DT </strong></h6>
+                      </div>
+                      <div class="col-4 col-sm-4 col-md-4">
+                          <div class="quantity">
+                              <input type="button" value="+" id="plus5" class="plus">
+                              <input type="number" step="1" max="99" min="1" value="1" id="qty5" title="Qty" class="qty"
+                                     size="4">
+                              <input type="button" value="-" id="minus5" class="minus">
+                          </div>
+                      </div>
+                      <div class="col-2 col-sm-2 col-md-2 text-right">
+                          <button type="button" id="delete5" class="btn btn-outline-danger btn-xs" onclick="delet('prix5', 'row5')">
+                              <i class="fa fa-trash" aria-hidden="true"></i>
+                          </button>
+                          <button type="button" onclick="changed('heart5')" class="btn btn-outline-danger btn-xs">
+                            <i id="heart5" class="fa fa-heart-o" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                  </div>
+              </div>
+              <hr>
+              <!-- END PRODUCT -->
+                <div class="pull-right">
+                    <button id="updatecart" class="btn btn-outline-secondary pull-right">
+                        Update shopping cart
+                    </button>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="coupon col-md-5 col-sm-5 no-padding-left pull-left">
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="text" id="coupon-code" class="form-control" placeholder="coupon code">
+                        </div>
+                        <div class="col-6">
+                            <input type="submit" id="coupon" class="btn btn-default" value="Use coupon">
+                        </div>
+                      <p id="invalide">Code Invalide</p>
+                      <p id="valide">Code Valide -20 DT</p>
+                    </div>
+                </div>
+                <div class="pull-right" style="margin: 10px">
+                    <a href="" class="btn btn-success pull-right">Checkout</a>
+                    <div class="pull-right" style="margin: 5px">
+                        Total price: <b><p id="totalprix">0</p> DT</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<script type="text/javascript" src="js/main.js" defer></script>
+</body>
+</html>
